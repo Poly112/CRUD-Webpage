@@ -1,4 +1,5 @@
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,6 +9,9 @@
   outline: none;
 }
 
+main {
+  overflow-x: hidden;
+}
 main.home {
   background: linear-gradient(315deg, #2b2727, transparent);
   padding: 20px 10px;
@@ -20,7 +24,7 @@ main.home .img {
 main.home .img img {
   border-radius: 5px;
   height: 100%;
-  width: 100%;
+  width: auto;
   object-fit: cover;
 }
 main.home .text {
@@ -29,6 +33,8 @@ main.home .text {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-content: center;
+  justify-content: space-between;
 }
 main.home .text h2 {
   margin: 10px;
@@ -53,6 +59,69 @@ main.home .text button {
 main.home .text button:hover {
   background-color: #638ed5;
   box-shadow: #332d2d;
+}
+
+main.addUser {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+}
+main.addUser .nav {
+  text-align: start;
+}
+main.addUser .nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+main.addUser .nav a:hover {
+  color: #3b71ca;
+}
+main.addUser .form form {
+  width: 100%;
+}
+main.addUser .form form .input {
+  margin: 20px 0;
+}
+main.addUser .form form .input input {
+  padding: 0.4rem 0.8rem;
+  margin: 1rem;
+  width: 46%;
+}
+main.addUser .form form .image input {
+  width: 100%;
+  padding: 1rem;
+}
+main.addUser .form form .textarea {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.addUser .form form .textarea textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+}
+main.addUser .form form .button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main.addUser .form form .button button {
+  height: 2.5rem;
+  width: 8rem;
+  color: #fbfbfb;
+  font-size: 1.2rem;
+  background-color: #3b71ca;
+  border-radius: 5px;
+  border: none;
+}
+main.addUser .form form .button button:hover {
+  background-color: #638ed5;
+}
+main.addUser .form form .button button:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
 }
 
 main.users {
@@ -82,12 +151,12 @@ main.users .button a button {
   width: 8rem;
   color: #fbfbfb;
   font-size: 1.2rem;
-  background-color: #14a44d;
+  background-color: #3b71ca;
   border-radius: 5px;
   border: none;
 }
 main.users .button a button:hover {
-  background-color: #1ad162;
+  background-color: #638ed5;
 }
 main.users .button a button:hover:active {
   box-shadow: #9fa6b2 0px 0px 3px 3px;
@@ -111,16 +180,27 @@ main.users table td.photo img {
 }
 main.users table td.action button {
   padding: 0.5rem 1rem;
-  background-color: #3b71ca;
   border-radius: 5px;
   border: none;
   margin: 1rem 0;
   color: #fbfbfb;
 }
-main.users table td.action button:hover {
-  background-color: #638ed5;
+main.users table td.action button.edit {
+  background-color: #14a44d;
 }
-main.users table td.action button:hover:active {
+main.users table td.action button.edit:hover {
+  background-color: #1ad162;
+}
+main.users table td.action button.edit:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
+}
+main.users table td.action button.delete {
+  background-color: #dc4c64;
+}
+main.users table td.action button.delete:hover {
+  background-color: #e47789;
+}
+main.users table td.action button.delete:hover:active {
   box-shadow: #9fa6b2 0px 0px 3px 3px;
 }
 main.users table td.action button i {
@@ -145,6 +225,76 @@ main.users .info a:hover {
   color: #3b71ca;
 }
 
+main.user {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+}
+main.user .nav {
+  text-align: start;
+}
+main.user .nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+main.user .nav a:hover {
+  color: #3b71ca;
+}
+main.user .container .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+}
+main.user .container .data {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+main.user .container .data .profile {
+  width: 70%;
+  border: 1px solid #332d2d;
+  padding: 1.5rem;
+  box-shadow: #332d2d 0px 0px 5px 0px;
+  border-radius: 5px;
+}
+main.user .container .data .profile label {
+  font-weight: 500;
+}
+main.user .container .data .profile label p {
+  font-weight: normal;
+  margin: 10px;
+}
+main.user .container .data .profile .edit {
+  display: flex;
+  justify-content: flex-end;
+}
+main.user .container .data .profile .edit button {
+  padding: 0.5rem 1rem;
+  background-color: #14a44d;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem 0;
+  color: #fbfbfb;
+}
+main.user .container .data .profile .edit button:hover {
+  background-color: #1ad162;
+}
+main.user .container .data .profile .edit button:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
+}
+main.user .container .data .profile .edit button i {
+  margin-left: 1rem;
+}
+
+@supports (-moz-appearance: none) {
+  main.home .img {
+    width: 600px;
+  }
+}
 header {
   background-color: #3b71ca;
   display: flex;
@@ -165,6 +315,9 @@ header nav div {
   padding: 10px;
   margin: 0 10px;
 }
+header nav div a {
+  color: black;
+}
 header nav div:hover {
   background-color: #638ed5;
   border-radius: 5px;
@@ -174,7 +327,8 @@ header nav div:hover:active {
   box-shadow: #9fa6b2 0px 0px 3px 3px;
 }
 
-button {
+button,
+[type=file] {
   cursor: pointer;
 }
 

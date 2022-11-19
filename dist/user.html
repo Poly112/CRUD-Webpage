@@ -15,45 +15,55 @@
         <header>
             <div class="logo"><img src="img/Logo.svg" alt="" /></div>
             <nav>
-                <div class="home">Home</div>
-                <div class="add-user">Add User</div>
-                <div class="database">Database</div>
+                <div class="home"><a href="./index.html">Home</a></div>
+                <div class="add-user">
+                    <a href="./addUser.html">Add User</a>
+                </div>
+                <div class="users"><a href="./users.html">Users</a></div>
             </nav>
         </header>
 
         <main class="user">
+            <div class="nav">
+                <p>
+                    <a href="./index.html">Home</a>/
+                    <a href="./user.html">User</a>
+                </p>
+            </div>
             <div class="container">
-                <div class="nav">
-                    <p>Home/user</p>
-                </div>
-
                 <div class="image">
                     <img src="./img/pexels-pixabay-220453 (1).jpg" alt="" />
                 </div>
-                <div class="biodata">
-                    <label for="name">
-                        Name:
-                        <p id="name">Nwaeke Polycarp Ikechukwu</p> </label
-                    ><label for="mail"
-                        >Email
-                        <p id="email"></p>
-                    </label>
-                </div>
-                <div class="bio">
-                    <label for="bio"
-                        >Bio
-                        <p id="bio">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Et, quia esse saepe quam sunt eveniet vel
-                            quasi numquam modi ratione?
-                        </p>
-                    </label>
-                </div>
-                <div class="edit">
-                    <a href="#"
-                        ><button type="button">
-                            Edit <i class="fas fa-edit"></i></button
-                    ></a>
+                <div class="data">
+                    <div class="profile">
+                        <div class="biodata">
+                            <label for="name">
+                                Name
+                                <p id="name">
+                                    Nwaeke Polycarp Ikechukwu
+                                </p> </label
+                            ><label for="mail"
+                                >Email
+                                <p id="email">poly@gmail.com</p>
+                            </label>
+                        </div>
+                        <div class="bio">
+                            <label for="bio"
+                                >Bio
+                                <p id="bio">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Et, quia esse saepe quam
+                                    sunt eveniet vel quasi numquam modi ratione?
+                                </p>
+                            </label>
+                        </div>
+                        <div class="edit">
+                            <a href="#"
+                                ><button type="button">
+                                    Edit <i class="fas fa-edit"></i></button
+                            ></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
