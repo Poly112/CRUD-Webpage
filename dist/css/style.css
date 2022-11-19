@@ -4,7 +4,7 @@
   padding: 0;
   font-size: 16px;
   list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none;
 }
 
@@ -55,6 +55,96 @@ main.home .text button:hover {
   box-shadow: #332d2d;
 }
 
+main.users {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+}
+main.users .nav {
+  text-align: start;
+}
+main.users .nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+main.users .nav a:hover {
+  color: #3b71ca;
+}
+main.users .button {
+  text-align: end;
+}
+main.users .button a {
+  text-decoration: none;
+}
+main.users .button a button {
+  height: 2.5rem;
+  width: 8rem;
+  color: #fbfbfb;
+  font-size: 1.2rem;
+  background-color: #14a44d;
+  border-radius: 5px;
+  border: none;
+}
+main.users .button a button:hover {
+  background-color: #1ad162;
+}
+main.users .button a button:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
+}
+main.users table {
+  height: 50vh;
+  border: 1px solid #332d2d;
+  padding: 20px;
+}
+main.users table th,
+main.users table td {
+  padding: 7px 10px 10px 10px;
+}
+main.users table td.photo img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+}
+main.users table td.action button {
+  padding: 0.5rem 1rem;
+  background-color: #3b71ca;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem 0;
+  color: #fbfbfb;
+}
+main.users table td.action button:hover {
+  background-color: #638ed5;
+}
+main.users table td.action button:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
+}
+main.users table td.action button i {
+  margin-left: 1rem;
+}
+main.users table th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #332d2d;
+  text-align: left;
+}
+main.users .info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+main.users .info a {
+  text-decoration: none;
+}
+main.users .info a:hover {
+  color: #3b71ca;
+}
+
 header {
   background-color: #3b71ca;
   display: flex;
@@ -78,8 +168,22 @@ header nav div {
 header nav div:hover {
   background-color: #638ed5;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 1px #9fa6b2;
-  font-weight: 600;
+  cursor: pointer;
+}
+header nav div:hover:active {
+  box-shadow: #9fa6b2 0px 0px 3px 3px;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: 100vh;
 }
 
 footer {
@@ -111,13 +215,19 @@ footer .container .logo img {
 footer .container .connect {
   display: flex;
 }
-footer .container .connect i {
+footer .container .connect a {
+  color: black;
+}
+footer .container .connect a i {
   margin: 0 10px;
   font-size: 20px;
 }
 footer .container .contact {
   display: flex;
   flex-direction: column;
+}
+footer .container .contact a {
+  color: black;
 }
 footer .container .contact p {
   margin: 20px 0;
