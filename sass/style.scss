@@ -4,6 +4,13 @@
 // body {
 //     overflow: hidden;
 // }
+a {
+    cursor: pointer;
+}
+
+body {
+    min-width: 360px !important;
+}
 
 header {
     background-color: $primary-color;
@@ -23,7 +30,6 @@ header {
             a {
                 color: black;
             }
-
             &:hover {
                 background-color: lighten($primary-color, 10%);
                 border-radius: 5px;
@@ -47,7 +53,7 @@ a {
 }
 
 main {
-    height: clamp(100vh, 90vh, 80vh);
+    height: fit-content;
 }
 
 footer {

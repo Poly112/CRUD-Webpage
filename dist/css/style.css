@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -132,6 +133,7 @@ main.users {
 }
 main.users .nav {
   text-align: start;
+  margin: 2rem 0;
 }
 main.users .nav a {
   font-size: 1.2rem;
@@ -141,6 +143,7 @@ main.users .nav a:hover {
   color: #3b71ca;
 }
 main.users .button {
+  margin: 2rem 0;
   text-align: end;
 }
 main.users .button a {
@@ -214,6 +217,7 @@ main.users table th {
   text-align: left;
 }
 main.users .info {
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -227,12 +231,12 @@ main.users .info a:hover {
 
 main.user {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   padding: 1.5rem 3rem;
 }
 main.user .nav {
   text-align: start;
+  margin-bottom: 2rem;
 }
 main.user .nav a {
   font-size: 1.2rem;
@@ -295,6 +299,230 @@ main.user .container .data .profile .edit button i {
     width: 600px;
   }
 }
+@media (max-width: 1024px) {
+  main.addUser .form form .input input {
+    width: 46%;
+  }
+  main.home .text {
+    width: 70%;
+    padding: 0 10px;
+  }
+  main.home .img {
+    padding: 0 10px;
+  }
+  main.home .img img {
+    width: 100%;
+  }
+}
+@media (min-width: 958px) {
+  main.users .accordions {
+    display: none;
+  }
+}
+@media (max-width: 958px) {
+  main.addUser {
+    justify-content: stretch;
+  }
+  main.addUser .form form .input input {
+    width: 43%;
+  }
+  main.user {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 3rem;
+    justify-content: stretch;
+  }
+  main.user .nav {
+    margin-bottom: 1.5rem;
+  }
+  main.users {
+    justify-content: stretch;
+  }
+  main.users .nav {
+    margin-bottom: 2rem;
+  }
+  main.users .button {
+    margin-bottom: 2rem;
+  }
+  main.users table {
+    margin-bottom: 2rem;
+  }
+  main.users table {
+    display: none;
+  }
+  main.users .accordions {
+    display: block;
+    /* Style the buttons that are used to open and close the accordion panel */
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  main.users .accordions .accordion:after {
+    content: "➕"; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin: 0 0.5rem 0 1em;
+  }
+  main.users .accordions .active:after {
+    content: "➖"; /* Unicode character for "minus" sign (-) */
+  }
+  main.users .accordions .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main.users .accordions .accordion img {
+    margin: 0 1.5rem 0 1rem;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  main.users .accordions .active,
+main.users .accordions .accordion:hover {
+    background-color: #ccc;
+  }
+  main.users .accordions .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  main.users .accordions .panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+  }
+  main.users .accordions .panel label {
+    font-weight: 500;
+  }
+  main.users .accordions .panel label p {
+    font-weight: normal;
+  }
+  main.users .accordions .panel .action {
+    margin-top: 1rem;
+  }
+  main.users .accordions .panel .action button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    margin: 1rem 0;
+    color: #fbfbfb;
+  }
+  main.users .accordions .panel .action button.edit {
+    background-color: #14a44d;
+  }
+  main.users .accordions .panel .action button.edit:hover {
+    background-color: #1ad162;
+  }
+  main.users .accordions .panel .action button.edit:hover:active {
+    box-shadow: #9fa6b2 0px 0px 3px 3px;
+  }
+  main.users .accordions .panel .action button.delete {
+    background-color: #dc4c64;
+  }
+  main.users .accordions .panel .action button.delete:hover {
+    background-color: #e47789;
+  }
+  main.users .accordions .panel .action button.delete:hover:active {
+    box-shadow: #9fa6b2 0px 0px 3px 3px;
+  }
+  main.users .accordions .panel .action button i {
+    margin-left: 1rem;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container .logo {
+    margin: 0 0 1.5rem 0;
+  }
+  footer .container .connect {
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 510px) {
+  .header i {
+    display: none;
+  }
+}
+@media (max-width: 510px) {
+  .invisible {
+    display: none !important;
+  }
+  .live {
+    left: 0 !important;
+  }
+  header {
+    position: relative;
+  }
+  header nav.nav {
+    position: absolute;
+    flex-direction: column;
+    background-color: #22447d;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 4rem;
+    justify-content: center;
+    top: 0px;
+    left: 100%;
+    transition: all 0.5s ease-in;
+  }
+  header nav.nav .fa-x {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+  header nav.nav .fa-x:hover:active {
+    color: #3b71ca;
+    font-size: 1.6rem;
+  }
+  header nav.nav div {
+    margin: 1rem 0;
+  }
+  header nav.nav div:hover {
+    background-color: inherit;
+  }
+  header nav.nav div:hover:active {
+    box-shadow: none;
+  }
+  header nav.nav div a {
+    font-size: 1.2rem;
+    color: #9fa6b2;
+  }
+  header nav.nav div a:hover:active {
+    font-size: 1.4rem;
+    color: #fbfbfb;
+  }
+  main.home {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+  main.home .img {
+    display: none;
+  }
+  main.addUser .form form .input input {
+    width: 95%;
+  }
+}
+a {
+  cursor: pointer;
+}
+
+body {
+  min-width: 360px !important;
+}
+
 header {
   background-color: #3b71ca;
   display: flex;
@@ -337,7 +565,7 @@ a {
 }
 
 main {
-  height: 100vh;
+  height: fit-content;
 }
 
 footer {

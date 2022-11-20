@@ -6,6 +6,7 @@ main.users {
 
     .nav {
         text-align: start;
+        margin: 2rem 0;
 
         a {
             font-size: 1.2rem;
@@ -18,6 +19,7 @@ main.users {
     }
 
     .button {
+        margin: 2rem 0;
         text-align: end;
 
         a {
@@ -107,6 +109,7 @@ main.users {
     }
 
     .info {
+        margin: 1rem 0;
         display: flex;
         align-items: center;
         justify-content: end;
